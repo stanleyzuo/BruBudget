@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+.navbar-brand{ 
+	font-family: 'Oleo Script Swash Caps', cursive;
+	font-size: 35px;
+}
+
+li{
+	font-size: 25px;
+}
+
+ body{
+ 	text-align: center;
+ 	background-color: white;
+ }
+
+
+ .form{
+ 	margin-left: auto ;
+  	margin-right: auto ;
+  	width:165px ;
+  	padding-bottom: 20px;
+  	padding-top: 10px;
+ }
+
+.page{
+	margin-top: 100px;
+}
