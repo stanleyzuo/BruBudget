@@ -1,0 +1,15 @@
+<h1>BruBudget</h1>
+<br/>
+
+<% @expenditures.each do |expenditure| %>
+<div>
+	<strong><%=link_to expenditure.name, expenditure_path(expenditure) %></strong>
+	<br/>
+	<br/>
+	<%= link_to image_tag(expenditure.avatar.url(:thumb)), expenditure_path(expenditure) %>
+	<P><%= expenditure.price %></p>
+	<hr/> 
+	<br/>
+</div>
+<% end %> 
+<h2> <%= link_to 'Add expenditure', new_expenditure_path %> </h2>

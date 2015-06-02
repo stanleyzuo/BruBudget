@@ -1,0 +1,16 @@
+<h1><%= @expenditure.name %></h1>
+
+<p><b> Price: </b><%= @expenditure.price %></p>
+
+<%= image_tag @expenditure.avatar.url(:medium) %>
+
+</br>
+
+<%= link_to 'Edit', edit_expenditure_path(@expenditure) %> |
+
+<%= link_to 'Delete', expenditure_path(@expenditure),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+
+
+<p><%= link_to 'All Expenditures', expenditures_path %></p>
