@@ -3,7 +3,6 @@
 <div>
 	<strong><%=link_to expenditure.name, expenditure_path(expenditure) %></strong>
 	<br/>
-	<br/>
 	<%= link_to image_tag(expenditure.avatar.url(:thumb)), expenditure_path(expenditure) %>
 	<P><%= expenditure.price %></p>
 	<hr/> 

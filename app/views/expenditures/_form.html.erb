@@ -1,6 +1,6 @@
 <%= simple_form_for @expenditure do |f| %>
-  <%= f.input :name %>
+  <%= f.input :name, label: 'Expenditure' %>
   <%= f.input :price %>
-  <%= f.input :avatar, as: :file %>
+  <%= f.input :avatar, label: 'Photo', as: :file %>
   <%= f.button :submit %>
 <% end %>
