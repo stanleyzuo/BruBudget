@@ -10,8 +10,9 @@ class ExpendituresController < ApplicationController
 	end
 
 	def create
-		@expenditure = current_user.expenditures.create (expenditure_params)
+		@expenditure = Expenditure.new(expenditure_params)
 		@user = current_user
+		@expenditure.user = @user
 
 		if @expenditure.save 
 		redirect_to @expenditure
