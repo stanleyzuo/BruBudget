@@ -1,7 +1,8 @@
 class ExpendituresController < ApplicationController
 
 	def index
-		@expenditures = Expenditure.all.order(:name) 
+		@user = current_user
+		@expenditures = @user.expenditures.order(:name) 
 	end 
 
 	def new
@@ -9,7 +10,8 @@ class ExpendituresController < ApplicationController
 	end
 
 	def create
-		@expenditure = Expenditure.new (expenditure_params)
+		@expenditure = current_user.expenditures.create (expenditure_params)
+		@user = current_user
 
 		if @expenditure.save 
 		redirect_to @expenditure
